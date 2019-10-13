@@ -1,0 +1,40 @@
+﻿<Page
+    x:Class="UWPPasswordCheckAssignment.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWPPasswordCheckAssignment"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="First Name"  FontSize="19" Grid.Row="0" VerticalAlignment="Center" Margin="20"/>
+        <TextBox x:Name="FirstNameTextBox" Grid.Column="1" Width="300" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,10,0,0"/>
+
+        <TextBlock Text="Password" FontSize="19" Grid.Row="1" VerticalAlignment="Center" Margin="20"/>
+        <TextBox x:Name="PasswordTextBox" Width="300" PlaceholderText="Second Name here" VerticalAlignment="Center" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Margin="10"/>
+
+        <Button  Grid.Row="2" Grid.Column="0" Content="Save" Margin="20" Name="SaveButton" Click="SaveButton_Click"/>
+
+        <TextBlock x:Name="ResultantTextBlock" Grid.Row="3" FontSize="19" Grid.Column="0" />
+
+        <Frame x:Name="MyFrame">
+            
+        </Frame>
+    </Grid>
+</Page>
